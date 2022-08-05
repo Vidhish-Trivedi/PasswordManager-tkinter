@@ -83,6 +83,7 @@ def search_password():
         try:
             with open('./passwords.json', 'r') as file:
                 saved_passwords = json.load(file)
+                # FOR THIS 'try' we can easily use if/else also.
                 try:
                     uid_output = saved_passwords[e_website.get().title()]["Username"]
                     pass_output = saved_passwords[e_website.get().title()]["Password"]
